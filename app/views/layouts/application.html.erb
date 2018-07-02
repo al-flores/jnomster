@@ -33,8 +33,13 @@
       </div>
     </nav>
 
-    <p class="alert alert-info"><%= notice %></p>
+    <% if notice.present? %>
+
+      <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert.present? %>
     <o class="alert alert-danger"><%= alert %></o>
+    <% end %>
 
 
     <%= yield %>
